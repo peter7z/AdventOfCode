@@ -69,7 +69,7 @@ for (;;) {
   current = normalizeUp(1 + currentInt)
 }
 
-console.log(validPasswords)
+console.log('Part 1: ', validPasswords)
 
 // Part 2
 
@@ -85,4 +85,4 @@ for (;;) {
   current = normalizeUp(1 + currentInt)
 }
 
-console.log(validPasswords)
+console.log('Part 2: ', validPasswords)
