@@ -1,13 +1,13 @@
-const EventEmitter = require('events');
+import EventEmitter from 'events'
 
-class Resource extends EventEmitter {
+export default class Resource extends EventEmitter {
   constructor(name){
     super()
     this.name = name
     this.data = []
-    this.log = this.log.bind(this);
-    this.read = this.read.bind(this);
-    this.write = this.write.bind(this);
+    this.log = this.log.bind(this)
+    this.read = this.read.bind(this)
+    this.write = this.write.bind(this)
   }
 
   log() {
@@ -30,5 +30,3 @@ class Resource extends EventEmitter {
     this.emit('write')
   }
 }
-
-module.exports = Resource;

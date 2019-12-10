@@ -1,4 +1,4 @@
-exports.raw =`XNR)9W1
+export const raw = `XNR)9W1
 VGS)XCW
 WS5)5XM
 T9F)RTN
@@ -1060,3 +1060,5 @@ GWM)4DR
 GDW)F7M
 DQR)P29
 89K)RHG`
+
+export default raw.split('\n').map(line => line.split(')'))

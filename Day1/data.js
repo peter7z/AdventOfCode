@@ -1,4 +1,4 @@
-exports.data = [
+export default [
   86608,
   97271,
   51200,

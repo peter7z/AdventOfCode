@@ -1,4 +1,4 @@
-const { data } = require('./data');
+import data from './data.js'
 
 function calculateFuel(fuel) {
   let res = Math.floor(fuel / 3)
@@ -6,15 +6,13 @@ function calculateFuel(fuel) {
 }
 
 function recursiveFuel(fuel) {
-  const requiredFuel = calculateFuel(fuel);
+  const requiredFuel = calculateFuel(fuel)
   if (requiredFuel <= 0) return 0
   else return requiredFuel + recursiveFuel(requiredFuel)
 }
 
-const totalMass = data.reduce((totalMass, mass) => totalMass + calculateFuel(mass), 0)
+export const part1 = () =>
+  data.reduce((totalMass, mass) => totalMass + calculateFuel(mass), 0)
 
-const totalMassRecursive = data.reduce((totalMass, mass) => totalMass + recursiveFuel(mass), 0)
-
-console.log('Part 1 result: ', totalMass)
-console.log('Part 2 result: ', totalMassRecursive)
-
+export const part2 = () =>
+  data.reduce((totalMass, mass) => totalMass + recursiveFuel(mass), 0)

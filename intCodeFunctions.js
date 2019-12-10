@@ -1,4 +1,4 @@
-const { intToArray } = require('./helpers')
+import { intToArray } from './helpers.js'
 
 function parseInstruction(pointer, mem) {
   const intArray = intToArray(mem[pointer])
@@ -79,4 +79,4 @@ async function runProgram(program, read, write, name) {
   }
 }
 
-module.exports = runProgram
+export default runProgram
