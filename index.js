@@ -7,6 +7,7 @@ import * as day4 from './Day4/code.js'
 import * as day5 from './Day5/code.js'
 import * as day6 from './Day6/code.js'
 import * as day7 from './Day7/code.js'
+import * as day8 from './Day8/code.js'
 
 console.log() // for (let i = 0; i < 9; i++) {}
 ;(async () => {
@@ -16,5 +17,5 @@ console.log() // for (let i = 0; i < 9; i++) {}
   await logDayResults(day4, 4)
   await logDayResults(day5, 5)
   await logDayResults(day6, 6)
-  await logDayResults(day7, 7)
+  await logDayResults(day8, 8)
 })()

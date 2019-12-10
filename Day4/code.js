@@ -1,15 +1,10 @@
+import { intToArray } from '../helpers.js'
+
 const raw = '197487-673251'
 const [bottom, top] = raw.split('-').map(x => parseInt(x))
 
-function getIntArray(int) {
-  return int
-    .toString()
-    .split('')
-    .map(char => parseInt(char))
-}
-
 function normalizeUp(integer) {
-  const intArray = getIntArray(integer)
+  const intArray = intToArray(integer)
   let current = 0
   intArray.forEach((int, index) => {
     if (int < current) intArray[index] = current
@@ -19,7 +14,7 @@ function normalizeUp(integer) {
 }
 
 function normalizeDown(integer) {
-  const intArray = getIntArray(integer)
+  const intArray = intToArray(integer)
   let current = 0
   for (let i = 0; i < intArray.length; i++) {
     if (intArray[i] < current) {
