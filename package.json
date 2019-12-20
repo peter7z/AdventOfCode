@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "type": "module",
+  "engine-strict": true,
+  "engines": { "node" : ">=13.0.0" },
   "scripts": {
     "start": "node index",
     "day8": "node Day8/data.js",
